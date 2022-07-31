@@ -1,0 +1,121 @@
+body {
+  background-color: #111;
+  background-image: radial-gradient(#3e5058 2px, transparent 2px),
+    radial-gradient(#3e5058 2px, transparent 2px);
+  background-size: calc(20 * 2px) calc(20 * 2px);
+  background-position: 0 0, calc(10 * 2px) calc(10 * 2px);
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  font-family: "Quicksand", sans-serif;
+}
+
+canvas {
+  background: transparent;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  cursor: none;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eee;
+  background-image: radial-gradient(#e3b9b7 2px, transparent 2px),
+    radial-gradient(#e3b9b7 2px, transparent 2px);
+  background-size: calc(20 * 2px) calc(20 * 2px);
+  background-position: 0 0, calc(10 * 2px) calc(10 * 2px);
+  opacity: 1;
+  transform: translateY(0vw);
+  transition: 1s ease-in-out;
+  transition-property: opacity, transform;
+  animation: slide-in 1s ease-in-out;
+
+  @keyframes slide-in {
+    0% {
+      opacity: 0;
+      transform: translateY(100vh);
+    }
+  }
+
+  &_disabled {
+    opacity: 0;
+    transform: translateY(-100vh);
+  }
+}
+
+.card {
+  text-align: center;
+  color: #000;
+  max-width: 500px;
+  padding: 3vmin;
+  margin: 3vmin;
+  background: #fff;
+  box-shadow: -1vmin 1vmin 0 rgba(25, 25, 25, 0.25);
+  border-bottom: 1vmin solid #000;
+
+  & h1 {
+    font-family: "Rubik Glitch", cursive;
+    text-transform: uppercase;
+    color: #000;
+    font-size: 6vmin;
+    font-weight: 400;
+    margin: 0;
+    margin-bottom: 2vmin;
+  }
+
+  & p {
+    font-size: 3vmin;
+    font-weight: 500;
+    margin: 0;
+    margin-bottom: 4.5vmin;
+  }
+}
+
+.btn {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: inline-block;
+  margin: 0 0.5vmin;
+  padding: 1.5vmin 4vmin;
+  font-size: 3vmin;
+  letter-spacing: 0.1vmin;
+  color: #fff;
+  background-color: #000;
+  border: 0.5vmin solid #000;
+  border-radius: 0;
+  box-shadow: -0.5vmin 0.5vmin 0 #d95751;
+  transition: 0.1s ease-in-out;
+  transition-property: box-shadow, transform;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover,
+  &:focus {
+    transform: translate(-0.25vmin, 0.25vmin);
+    box-shadow: -0.25vmin 0.25vmin 0 #d95751;
+  }
+
+  &:active {
+    transform: translate(-0.5vmin, 0.5vmin) scale(0.95);
+    box-shadow: 0 0 0 transparent;
+  }
+}
+
+.mark {
+  color: #d95751;
+}
