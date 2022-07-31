@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Xavior-Ofc DevGame</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&family=Rubik+Glitch&display=swap" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<canvas id="surface"></canvas>
+
+<section class="overlay" id="start_menu">
+  <div class="card">
+    <h1>Ninja Cards By XaviorOfc</h1>
+    <p>Gunakan Jari Untuk <b class="mark">Main</b>, Bukan <b class="mark">Kaki</b></p>
+    <button class="btn" id="start">Mulai</button>
+  </div>
+</section>
+
+<section class="overlay overlay_disabled" id="restart_menu">
+  <div class="card">
+    <h1>Habis Waktunya Cuk</h1>
+    <p>Skor Lu: <b class="mark" id="score"></b></p>
+    <button class="btn" id="restart">Main Lagi Bng</button>
+  </div>
+</section>
+<!-- partial -->
+  <script src='https://cdn.jsdelivr.net/gh/elsemeow/meowgine@2.2.2-alpha/dist/meowgine.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/sat/0.9.0/SAT.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
